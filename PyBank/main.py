@@ -51,7 +51,9 @@ print("*************************************")
 print(" ")
 
 #Print Financial Analysis Table of Findings to .txt file
+#Open correct directory for correct file location
 os.chdir("Analysis")
+#Append printed lines to new .txt file
 print("Financial Analysis", file = open("Financial Analysis.txt", "a"))
 print("*************************************", file = open("Financial Analysis.txt", "a"))
 print("Total Months: " + str(total_months), file = open("Financial Analysis.txt", "a"))
@@ -60,4 +62,5 @@ print("Average Change: $" + str(round(avg_delta,2)), file = open("Financial Anal
 print("Greatest Increase in Profits: " + max_key + " $" + str(max(delta)), file = open("Financial Analysis.txt", "a"))
 print("Greatest Decrease in Profits: " + min_key + " $" + str(min(delta)), file = open("Financial Analysis.txt", "a"))
 print("*************************************", file = open("Financial Analysis.txt", "a"))
-open("Financial Analysis.txt", "a").close
+#Close .txt file
+open("Financial Analysis.txt", "a").close()
